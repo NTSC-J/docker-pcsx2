@@ -1,0 +1,4 @@
+#!/bin/sh
+
+docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --net host -v $HOME/.Xauthority:/home/pcsx2/.Xauthority -v $HOME:/home/pcsx2 --device /dev/snd --device /dev/dri -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native pcsx2
+
